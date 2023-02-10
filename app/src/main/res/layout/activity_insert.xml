@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/insetToolBard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/title_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="Add Note"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageButton
+        android:id="@+id/insetBackBtn"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:background="@color/title_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/insetToolBard"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:weightSum="10"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/insetToolBard"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"/>
+
+        <EditText
+            android:id="@+id/addNoteTitle"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Note Title"
+            android:textStyle="bold"
+            android:textColor="@color/edit_text"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/edit_text_back"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"/>
+
+        <EditText
+            android:id="@+id/addNoteDescribtion"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="Note Description"
+            android:textStyle="bold"
+            android:textColor="@color/edit_text"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/edit_text_back"
+            android:textSize="14sp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1.5">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Category"
+                android:gravity="start"
+                android:layout_marginStart="15dp"
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                />
+            <RadioGroup
+                android:id="@+id/cateRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:gravity="top"
+                android:layout_marginHorizontal="5dp"
+                >
+                <RadioButton
+                    android:id="@+id/workCateRadioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/work"
+                    android:layout_marginVertical="5dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textSize="12sp"
+                    android:text="Work"/>
+                <RadioButton
+                    android:id="@+id/personalCateRadioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/personal"
+                    android:layout_marginVertical="5dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textSize="12sp"
+                    android:text="Personal"/>
+                <RadioButton
+                    android:id="@+id/shoppingCateRadioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/shopping"
+                    android:layout_marginVertical="5dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textSize="12sp"
+                    android:text="Shopping"/>
+                <RadioButton
+                    android:id="@+id/healthCateRadioBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/health"
+                    android:layout_marginVertical="5dp"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textSize="12sp"
+                    android:text="Health"/>
+            </RadioGroup>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            >
+            <EditText
+                android:id="@+id/addDoingDatePicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Doing Date"
+                android:gravity="center"
+                android:textColor="@color/edit_text"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/date_text_back"
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addDateBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/date_btn_back"
+                android:text="Select Date"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                android:textColor="@color/white" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="2"
+            >
+            <EditText
+                android:id="@+id/addDoingTimePicker"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Doing Time"
+                android:gravity="center"
+                android:textColor="@color/edit_text"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/date_text_back"
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addTimeBtn"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Select Time"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/date_btn_back"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/addNoteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Add This Note To The List"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="@color/white"
+            android:background="@drawable/add_note_btn_back"
+            android:layout_marginHorizontal="25dp"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="8dp"
+        app:cardElevation="2dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:weightSum="8"
+            >
+            <CheckBox
+                android:id="@+id/selectImportant"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".7"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4.2"
+                android:orientation="vertical"
+                android:weightSum="2"
+                >
+                <TextView
+                    android:id="@+id/taskTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="I have to go for shopping"
+                    android:singleLine="true"
+                    android:fontFamily="@font/roboto"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:gravity="center_vertical"
+                    android:textSize="11sp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    >
+                    <TextView
+                        android:id="@+id/taskDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="0/00/0000"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="9sp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"/>
+                    <TextView
+                        android:id="@+id/taskTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="4:00 PM"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="9sp"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.3"
+                android:orientation="vertical"
+                android:weightSum="2"
+                >
+                <TextView
+                    android:id="@+id/taskCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:text="Type: Shopping"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                    android:textSize="11sp"
+                    />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/doneBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:text="Done"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleSmall"
+                        android:textColor="@color/white"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_marginVertical="4dp"
+                        android:background="@drawable/done_btn_back"
+                        />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight=".8"
+                android:orientation="vertical"
+                android:weightSum="2"
+                >
+                <ImageButton
+                    android:id="@+id/editBtn"
+                    android:src="@drawable/editnote"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <ImageButton
+                    android:id="@+id/deleteBtn"
+                    android:src="@drawable/delete"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

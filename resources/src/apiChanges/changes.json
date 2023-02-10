@@ -1,0 +1,11 @@
+[
+    {
+        "type": "rename-method",
+        "method": {
+            "className": "com/example/dailydoing/database/NoteDao",
+            "methodName": "getAllNotesByToday",
+            "methodSignature": "(Ljava/lang/String;)Ljava/util/List;"
+        },
+        "newName": "getAllNotes"
+    }
+]

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Daily Doing</string>
+    <string name="welcome_details">Daily Doing will help yoy to make a schedule of your daily task. Easily you can make your a list by adding your task here with title, description, date and time when you will do of your task.
+        Lets start your daily life with Daily Doing</string>
+</resources>
